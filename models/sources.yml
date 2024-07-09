@@ -11,7 +11,7 @@ sources:
       loaded_at_field: _etl_loaded_at
       tables:
           - name: customers
-            description: One record per customer.
+            description: Raw customers data. One record per customer.
             freshness: null
             columns:
               - name: id
@@ -19,9 +19,10 @@ sources:
                  - unique
                  - not_null
           - name: orders
-            description: One record per order. Includes cancelled and deleted orders.
+            description: Raw orders data. One record per order. It ncludes cancelled and deleted orders.
             columns:
               - name: id
+                description: primary key for customers data
                 tests:
                   - unique              
                   - not_null
