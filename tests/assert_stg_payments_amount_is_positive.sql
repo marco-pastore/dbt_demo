@@ -1,6 +1,6 @@
 with payment as(
     select * from {{ ref('stg_stripe__payments') }}
-),
+)
 
 select 
         order_id, 
