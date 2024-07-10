@@ -32,9 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # dbt run or dbt build, all of your models will be built as a view in your data platform. 
 # The configuration below will override this setting 
 
-models:
-  jaffle_shop:
-    +materialized: table
+# models:
+#   jaffle_shop:
+#     +materialized: table
 
 models:
   jaffle_shop:
